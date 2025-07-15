@@ -155,4 +155,13 @@ ABC     BC      ACC
 ...
 Note: Depending on how many unique DFA states are created (subsets), 
 output may include sets like AB, AC, BC, etc.
+
+the minimizing dfa: 
+
+| State | a | b |
+| A     | B | C |
+| B     | A | D |
+| C     | D | A |
+| D     | C | B |
+
 */
