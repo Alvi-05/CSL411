@@ -114,8 +114,8 @@ int main() {
 
     printf("Reading transitions from automata.txt...\n");
     n_transitions = 0;
-    while (fscanf(fp, "%s %s %s", transitions[n_transitions][0],
-                  transitions[n_transitions][1], transitions[n_transitions][2]) != EOF) {
+    while (fscanf(fp, "%s %s %s", transitions[n_transitions][0], transitions[n_transitions][1], transitions[n_transitions][2]) != EOF) 
+    {
         n_transitions++;
     }
 
