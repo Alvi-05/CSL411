@@ -5,29 +5,19 @@ char result[20][20], copy[3], states[20][20];
 
 void add_state(char a[3], int i) 
 {
-
   strcpy(result[i], a);
-
 }
 
 void display(int n) 
 {
-
   int k = 0;
-
   printf("\n  Epsilon closure of %s = { ", copy);
-
   while (k < n) 
   {
-
     printf(" %s", result[k]);
-
     k++;
-
   }
-
   printf(" }\n");
-
 }
 
 //main fn
@@ -47,6 +37,7 @@ int main()
   {
     scanf("%s", states[k]);
   }
+  //main thing
   for (k = 0; k < n; k++) 
   {
     i = 0;
