@@ -179,3 +179,27 @@ int main() {
     fclose(fp);
     return 0;
 }
+
+/*
+output:
+
+Enter number of states: 3
+Enter states (e.g., q0 q1 q2):
+q0
+q1
+q2
+Enter number of input symbols (including 'e'): 3
+Enter symbols (e.g., 0 1 e):
+0 1 e
+Reading transitions from automata.txt...
+
+--- New NFA transitions (without epsilon) ---
+d(q0, 0) = { q0, q1, q2 }
+d(q0, 1) = { q1, q2 }
+d(q1, 0) = {  }
+d(q1, 1) = { q2 }
+d(q2, 0) = {  }
+d(q2, 1) = {  }
+------------------------------------------
+
+*/
