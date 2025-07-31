@@ -46,3 +46,57 @@ int yylex(void) {
 }       
 %}
 */
+
+/*
+// var.l
+%{
+#include "y.tab.h"
+%}
+
+%%
+
+[a-zA-Z][a-zA-Z0-9]*   { yylval.str = strdup(yytext); return IDENTIFIER; }
+.                      { return yytext[0]; }
+\n                     { return 0; }
+
+%%
+
+// var.y
+%{
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void yyerror(const char *s);
+int yylex(void);
+%}
+
+%union {
+    char *str;
+}
+
+%token <str> IDENTIFIER
+
+%%
+
+input:
+    IDENTIFIER    { printf("Valid variable name: %s\n", $1); free($1); }
+    ;
+
+%%
+
+void yyerror(const char *s) {
+    fprintf(stderr, "Error: %s\n", s);
+}
+
+int main() {
+    printf("Enter a variable name:\n");
+    return yyparse();
+}
+
+//bash
+yacc -d yacc.y
+lex lex.l
+gcc y.tab.c lex.yy.c -o parser -ll
+./parser
+*/
