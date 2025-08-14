@@ -147,3 +147,27 @@ void main()
 	    
 	free(input);
 }
+
+
+/*
+output:
+
+Enter the string
+i+i*i          
+
+STACK	INPUT	ACTION
+$i	+i*i$	Shift
+$E	+i*i$	Reduced: E->i
+$E+	i*i$	Shift
+$E+i	*i$	Shift
+$E+E	*i$	Reduced: E->i
+$E	*i$	Reduced: E->E+E
+$E*	i$	Shift
+$E*i	$	Shift
+$E*E	$	Reduced: E->i
+$E	$	Reduced: E->E*E
+$E$		Shift
+$E$		Shift
+Accepted;
+
+*/
