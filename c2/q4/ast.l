@@ -1,4 +1,3 @@
-//lex
 %{
 #include "y.tab.h"
 #include <stdlib.h>
@@ -27,4 +26,3 @@
 int yywrap() {
     return 1;
 }
-
