@@ -1,4 +1,3 @@
-//lex
 %{
 #include "y.tab.h"
 #include <stdlib.h>
@@ -25,4 +24,3 @@
 .                           { return yytext[0]; }
 
 %%
-
