@@ -70,3 +70,29 @@ void follow(char c) {
     }
   }
 }
+
+
+/*output:
+
+Enter the no of productions : 
+5
+Enter the productions:
+S=(P)
+S=a
+S=b
+P=+Sy
+R=*Sz
+Enter a variable whose first & follow is to be found:S
+First(S)={(, a, b, }
+Follow(S)={$, y, z, }
+Want to continue or not(1/0) ? 1
+Enter a variable whose first & follow is to be found:P
+First(P)={+, }
+Follow(P)={), }
+Want to continue or not(1/0) ? 1
+Enter a variable whose first & follow is to be found:R
+First(R)={*, }
+Follow(R)={}
+Want to continue or not(1/0) ? 0
+
+*/
