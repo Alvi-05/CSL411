@@ -111,3 +111,14 @@ int main() {
     return 0;
 }
 
+/*
+output:
+
+Enter an  arithmetic expression: (3+5)+2*6
+✅ Parsing successful! Result = 20
+
+Enter an  arithmetic expression: 35*2
+❌ Error: Unexpected input after parsing at position 2
+
+
+*/
