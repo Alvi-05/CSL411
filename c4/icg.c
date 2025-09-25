@@ -65,3 +65,15 @@ int main() {
 
     return 0;
 }
+
+/*
+
+output:
+Enter expression: a+b*c-d
+
+Intermediate Code Generation:
+t1 = b * c
+t2 = a + t1
+t3 = t2 - d
+
+*/
